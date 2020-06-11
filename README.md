@@ -16,25 +16,53 @@ Cách cài đặt:
 - Ta sẽ có cây thư mục như hình:
 
 <div align="center">
-       <img src="/imgs/foldertree.png" width="400px" </img>
+       <img src="/imgs/foldertree.png" width="100px" height="200px"</img>
 </div>
      
 - Sau khi thực hiện các bước trên để training mô hình từ đầu ra chạy lệnh:
-    !python3 train_load.py 
-    --language_src data/train-en-vi/train.en 
-    --language_targ data/train-en-vi/train.vi 
-    --vocab_src vocab_english/ 
-    --vocab_targ vocab_vietnamese/ 
-    --word_emb_src word_embedding/model_en.bin 
-    --word_emb_targ word_embedding/model_vn.bin  
-    --num_layer 1 
-    --num_hiddens 512 
-    --learning_rate 0.001 
-    --keep_prob 0.85 
-    --beam_width 10 
-    --batch_size 64  
-    --checkpoint NMT.ckpt
-
+  <div>
+  <p>
+    !python3 train.py 
+      --language_src data/train-en-vi/train.en 
+      --language_targ data/train-en-vi/train.vi 
+      --vocab_src vocab_english/ 
+      --vocab_targ vocab_vietnamese/ 
+      --word_emb_src word_embedding/model_en.bin 
+      --word_emb_targ word_embedding/model_vn.bin  
+      --num_layer 1 
+      --num_hiddens 512 
+      --learning_rate 0.001 
+      --keep_prob 0.85 
+      --beam_width 10 
+      --batch_size 64  
+      --checkpoint NMT.ckpt
+  </p>
+  </div>
 Các tham số trên chỉ là tham khảo, ta có thể tùy chỉnh.
 
-- Sau khi chạy xong ta sẽ có được file checkpoint sau mỗi epoch
+- Sau khi chạy xong ta sẽ có được file checkpoint sau mỗi epoch:
+<div align="center">
+       <img src="/imgs/checkpoint.png" width="100px" height="200"</img>
+</div>
+
+- Nếu muốn train tiếp với checkpoint được lưu ta chạy đoạn lệnh:
+  <div>
+  <p>
+    !python3 train_load.py 
+      --language_src data/train-en-vi/train.en 
+      --language_targ data/train-en-vi/train.vi 
+      --vocab_src vocab_english/ 
+      --vocab_targ vocab_vietnamese/ 
+      --word_emb_src word_embedding/model_en.bin 
+      --word_emb_targ word_embedding/model_vn.bin  
+      --num_layer 1 
+      --num_hiddens 512 
+      --learning_rate 0.001 
+      --keep_prob 0.85 
+      --beam_width 10 
+      --batch_size 64  
+      --checkpoint NMT.ckpt
+  </p>
+  </div>
+
+- Để thực hiện dịch một file từ tiếng Anh sang tiếng Việt ta chạy đoạn lệnh:
