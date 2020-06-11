@@ -16,7 +16,7 @@ Cách cài đặt:
 - Ta sẽ có cây thư mục như hình:
 
 <div align="center">
-       <img src="/imgs/foldertree.png" width="200px" height="300px"</img>
+       <img src="/imgs/foldertree.png" width="400px" height="300px"</img>
 </div>
      
 - Sau khi thực hiện các bước trên để training mô hình từ đầu ra chạy lệnh:
