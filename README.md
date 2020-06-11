@@ -22,7 +22,7 @@ Cách cài đặt:
 - Sau khi thực hiện các bước trên để training mô hình từ đầu ra chạy lệnh:
 <div>
 <pre>
-!python3 train.py 
+python3 train.py 
   --language_src data/train-en-vi/train.en 
   --language_targ data/train-en-vi/train.vi 
   --vocab_src vocab_english/ 
@@ -38,7 +38,8 @@ Cách cài đặt:
   --checkpoint NMT.ckpt
 </pre>
 </div>
-Các tham số trên chỉ là tham khảo, ta có thể tùy chỉnh.
+
+- Các tham số trên chỉ là tham khảo, ta có thể tùy chỉnh.
 
 - Sau khi chạy xong ta sẽ có được file checkpoint sau mỗi epoch:
 <div align="center">
@@ -48,7 +49,7 @@ Các tham số trên chỉ là tham khảo, ta có thể tùy chỉnh.
 - Nếu muốn train tiếp với checkpoint được lưu ta chạy đoạn lệnh:
 <div>
 <pre>
-!python3 train_load.py 
+python3 train_load.py 
   --language_src data/train-en-vi/train.en 
   --language_targ data/train-en-vi/train.vi 
   --vocab_src vocab_english/ 
