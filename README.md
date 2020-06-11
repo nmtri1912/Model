@@ -16,7 +16,7 @@ Cách cài đặt:
 - Ta sẽ có cây thư mục như hình:
 
 <div align="center">
-       <img src="/imgs/foldertree.png" width="600px" height="300px"</img>
+       <img src="/imgs/foldertree.png" width="200px" height="300px"</img>
 </div>
      
 - Sau khi thực hiện các bước trên để training mô hình từ đầu ra chạy lệnh:
@@ -42,7 +42,7 @@ Các tham số trên chỉ là tham khảo, ta có thể tùy chỉnh.
 
 - Sau khi chạy xong ta sẽ có được file checkpoint sau mỗi epoch:
 <div align="center">
-       <img src="/imgs/checkpoint.png" width="200px" height="300"</img>
+       <img src="/imgs/checkpoint.png" width="400px" height="300"</img>
 </div>
 
 - Nếu muốn train tiếp với checkpoint được lưu ta chạy đoạn lệnh:
