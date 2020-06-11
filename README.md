@@ -16,12 +16,12 @@ Cách cài đặt:
 - Ta sẽ có cây thư mục như hình:
 
 <div align="center">
-       <img src="/imgs/foldertree.png" width="100px" height="200px"</img>
+       <img src="/imgs/foldertree.png" width="300px" height="300px"</img>
 </div>
      
 - Sau khi thực hiện các bước trên để training mô hình từ đầu ra chạy lệnh:
   <div>
-  <p>
+  <pre>
     !python3 train.py 
       --language_src data/train-en-vi/train.en 
       --language_targ data/train-en-vi/train.vi 
@@ -36,18 +36,18 @@ Cách cài đặt:
       --beam_width 10 
       --batch_size 64  
       --checkpoint NMT.ckpt
-  </p>
+  </pre>
   </div>
 Các tham số trên chỉ là tham khảo, ta có thể tùy chỉnh.
 
 - Sau khi chạy xong ta sẽ có được file checkpoint sau mỗi epoch:
 <div align="center">
-       <img src="/imgs/checkpoint.png" width="100px" height="200"</img>
+       <img src="/imgs/checkpoint.png" width="300px" height="300"</img>
 </div>
 
 - Nếu muốn train tiếp với checkpoint được lưu ta chạy đoạn lệnh:
   <div>
-  <p>
+  <pre>
     !python3 train_load.py 
       --language_src data/train-en-vi/train.en 
       --language_targ data/train-en-vi/train.vi 
@@ -62,7 +62,7 @@ Các tham số trên chỉ là tham khảo, ta có thể tùy chỉnh.
       --beam_width 10 
       --batch_size 64  
       --checkpoint NMT.ckpt
-  </p>
+  </pre>
   </div>
 
 - Để thực hiện dịch một file từ tiếng Anh sang tiếng Việt ta chạy đoạn lệnh:
