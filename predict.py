@@ -60,22 +60,20 @@ def getData(path):
 
 
 # Load vocab dictionary word2int, int2word
-with open('vocab_vietnamese/word2int.pickle', 'rb') as fopen:
+with open(word2int_english_path, 'rb') as fopen:
     word2int_english = pickle.load(fopen, encoding='latin1')
 
 int2word_english = dict(
     zip(word2int_english.values(), word2int_english.keys()))
 
 
-with open('vocab_vietnamese/word2int.pickle', 'rb') as fopen:
+with open(word2int_vietnamese_path, 'rb') as fopen:
     word2int_vietnamese = pickle.load(fopen, encoding='latin1')
 
 int2word_vietnamese = dict(
     zip(word2int_vietnamese.values(), word2int_vietnamese.keys()))
 
 # Convert input data from text to int
-
-
 def get_intSeq_english(data_list, max_length, padding=False):
     seq_list = list()
     for sent in data_list:
@@ -105,8 +103,6 @@ def get_intSeq_english(data_list, max_length, padding=False):
     return seq_list
 
 # Convert input data from text to int
-
-
 def get_intSeq_vietnamese(data_list, max_length, padding=False):
     seq_list = list()
     for sent in data_list:
@@ -418,6 +414,7 @@ tf.reset_default_graph()
 valid_article = getData(train_english_path)
 valid_title = getData(train_vietnamese_path)
 
+
 # Get the sequence of int value
 valid_article_intSeq = get_intSeq_english(
     valid_article, english_max_len, padding=True)
@@ -442,7 +439,6 @@ with tf.Session() as sess:
         # The actual length of each sequence in the batch (excluding "<pad>")
         batch_x_len_valid = list(map(lambda seq: len(
             [word_int for word_int in seq if word_int != 0]), batch_x_valid))
-        print(batch_x_len_valid)
 
         # Create a feed_dict for validation data
         valid_feed_dict = {
