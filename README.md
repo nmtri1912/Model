@@ -67,3 +67,17 @@ python3 train_load.py
 </div>
 
 - Để thực hiện dịch một file từ tiếng Anh sang tiếng Việt ta chạy đoạn lệnh:
+python3 predict.py 
+  --language_src data/train-en-vi/train.en 
+  --language_targ data/train-en-vi/train.vi 
+  --vocab_src vocab_english/ 
+  --vocab_targ vocab_vietnamese/ 
+  --word_emb_src word_embedding/model_en.bin 
+  --word_emb_targ word_embedding/model_vn.bin  
+  --num_layer 1 
+  --num_hiddens 512 
+  --learning_rate 0.001 
+  --keep_prob 0.85 
+  --beam_width 10 
+  --batch_size 64  
+  --checkpoint NMT.ckpt
