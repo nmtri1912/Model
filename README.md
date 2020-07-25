@@ -67,6 +67,8 @@ python3 train_load.py
 </div>
 
 - Để thực hiện dịch một file từ tiếng Anh sang tiếng Việt ta chạy đoạn lệnh:
+<div>
+<pre>
 python3 predict.py 
   --language_src data/test-2013-en-vi/tst2013.en 
   --language_targ data/test-2013-en-vi/tst2013.vi
@@ -83,3 +85,5 @@ python3 predict.py
   --checkpoint NMT.ckpt
 
 Tuy nhiên, khi dịch chúng ta sẽ có thể gặp lỗi không đủ bộ nhớ, khi đó ta sẽ tách file tst2013.en ra thành những file nhỏ hơn với kích thước mỗi file không quá 500 dòng. Sau đó ta thực hiện tuần tự từng file.
+</pre>
+</div>
